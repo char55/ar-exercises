@@ -7,4 +7,12 @@ require_relative './exercise_4'
 puts "Exercise 5"
 puts "----------"
 
-@storeSum = Store.sum(annual_revenue)
+puts Store.sum('annual_revenue')
+
+@storesAll = Store.all
+
+@storesAll.each do |s|
+  puts s.annual_revenue
+end
+
+puts Store.where("annual_revenue > 1000000").count
